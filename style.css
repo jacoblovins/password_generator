@@ -5,6 +5,7 @@ body {
     color: rgb(125, 125, 125);
 }
 
+/* Header */
 h1 {
     color: rgb(69, 69, 69);
     font-weight: 800;
@@ -13,11 +14,7 @@ h1 {
     margin-bottom: 50px;
 }
 
-h2 {
-    color: rgb(69, 69, 69);
-    font-weight: 700;
-}
-
+/* Main Content card */
 .card {
     background: #fff; 
     width: 90%;
@@ -26,12 +23,18 @@ h2 {
     margin-bottom: 5%; 
 }
 
+/* Card Label */
 #generateAPassword {
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
     margin-top: 10px;
 }
+h2 {
+    color: rgb(69, 69, 69);
+    font-weight: 700;
+}
 
+/* Password Box that gets updated by JavaScript */
 p {
     height: 200px;
     width: 100%;
@@ -42,14 +45,14 @@ p {
     padding-top: 3%;
 }
 
+/* Button */
 #generate {
     border-top: 2px solid #ccc;
     margin-top: 10px;
     padding-top: 40px;
-    /* margin-bottom: 10px; */
 }
 
-/* Small screen size changes */
+/* medium screen size changes */
 @media screen and (max-width: 780px) {
     h2 {
         text-align: center;
