@@ -1,22 +1,35 @@
 body {
     background: rgb(240, 240, 240);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: rgb(125, 125, 125);
 }
 
 h1 {
+    color: rgb(69, 69, 69);
+    font-weight: 800;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
-.container {
+h2 {
+    color: rgb(69, 69, 69);
+    font-weight: 700;
+}
+
+.card {
     background: #fff; 
+    width: 90%;
+    padding: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%; 
 }
 
 #generateAPassword {
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
     margin-top: 10px;
-    
 }
 
 p {
@@ -25,12 +38,23 @@ p {
     border: 2px dashed #ccc;
     text-align: center;
     font-size: 24px;
-    line-height: 3;
+    line-height: 1.5;
+    padding-top: 3%;
 }
 
-#button {
+#generate {
     border-top: 2px solid #ccc;
     margin-top: 10px;
-    padding-top: 15px;
-    margin-bottom: 50px;
+    padding-top: 40px;
+    /* margin-bottom: 10px; */
+}
+
+/* Small screen size changes */
+@media screen and (max-width: 780px) {
+    h2 {
+        text-align: center;
+    }
+    p {
+       height: 250px;
+    }  
 }
