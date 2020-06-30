@@ -1,40 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- CSS -->
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Password Generator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <!-- css -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="wrapper">
     <!-- Password Generator Header -->
     <header>
-        <h1>Password Generator</h1>
+      <h1>Password Generator</h1>
     </header>
-    <!-- Main card with label, password box, and button -->
+    <!-- Main card with header and password box -->
     <main class="card">
-        <section class="row flex-fill">
-            <div class="col-md-12" id="generateAPassword">
-                <h2>Generate a Password</h2>
-            </div>
-            <div class="col-md-12">
-                <p id="passBox" class="p-2 flex-grow-1">Your Secure Password</p>
-            </div>
-            <div class="col-md-12 text-center" id="generate">
-                <button id="button" type="button" class="btn btn-danger btn-lg">Generate Password</button>
-            </div>
-        </section>
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <!-- Generate password button -->
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
     </main>
-
-    <!-- JavaScript -->
-    <script src="app.js"></script>
+  </div>
+  <!-- JavaScript link -->
+  <script src="app.js"></script>
 </body>
 
 </html>

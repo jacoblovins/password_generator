@@ -1,63 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-    background: rgb(240, 240, 240);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    color: rgb(125, 125, 125);
+  font-family: sans-serif;
+  background-color: #f9fbfd;
 }
 
-/* Header */
-h1 {
-    color: rgb(69, 69, 69);
-    font-weight: 800;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+/* Main card with header, password box, and button */
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
-/* Main Content card */
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
 .card {
-    background: #fff; 
-    width: 90%;
-    padding: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%; 
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+.card-body {
+  min-height: 100px;
 }
 
-/* Card Label */
-#generateAPassword {
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-h2 {
-    color: rgb(69, 69, 69);
-    font-weight: 700;
-}
-
-/* Password Box that gets updated by JavaScript */
-p {
-    height: 200px;
-    width: 100%;
-    border: 2px dashed #ccc;
-    text-align: center;
-    font-size: 24px;
-    line-height: 1.5;
-    padding-top: 3%;
-}
-
-/* Button */
-#generate {
-    border-top: 2px solid #ccc;
-    margin-top: 10px;
-    padding-top: 40px;
+/* Randomly Generated Password */
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
 }
 
-/* medium screen size changes */
-@media screen and (max-width: 780px) {
-    h2 {
-        text-align: center;
-    }
-    p {
-       height: 250px;
-    }  
+/* Generate Password Button */
+.card-footer {
+  text-align: center;
+}
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.btn {
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Medium screen size changes */
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+  #password {
+    font-size: 1rem;
+  }
+}
+
+/* Small screen size changes */
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
 }
