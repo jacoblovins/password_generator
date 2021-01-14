@@ -1,28 +1,28 @@
 // Strings that will be concatenated 
-var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowerChar = "abcdefthijklmnopqrstuvwxyz";
-var numChar = "0123456789";
-var specialChar = "!@#$%^&<>*()_+~`|}{[]:;?,./-=";
+const upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerChar = "abcdefthijklmnopqrstuvwxyz";
+const numChar = "0123456789";
+const specialChar = "!@#$%^&<>*()_+~`|}{[]:;?,./-=";
 
 // Adding the event listener to the button and calling the main function
 document.getElementById("generate").addEventListener("click", generatePassword);
 
 function generatePassword() {   
     // Setting up concat and final password strings
-    var passwordCharSet = "";
-    var userPassword = "";
+    let passwordCharSet = "";
+    let userPassword = "";
     
     // Ask user for character length
-    var passLength = prompt("How many characters would you like your password to be? (between 8 and 128 characters)").trim();
+    const passLength = prompt("How many characters would you like your password to be? (between 8 and 128 characters)").trim();
     
     // check if user input is a number between 8 and 128
     if(passLength >= 8 && passLength <= 128){
 
         // Confirm user choices
-        var lowercase = confirm("Do you want to include lowercase letters?");
-        var uppercase = confirm("Do you want to include Uppercase letters?");
-        var numbers = confirm("Do you want to include numbers?");
-        var special = confirm("Do you want to include special characters?");
+        const lowercase = confirm("Do you want to include lowercase letters?");
+        const uppercase = confirm("Do you want to include Uppercase letters?");
+        const numbers = confirm("Do you want to include numbers?");
+        const special = confirm("Do you want to include special characters?");
 
         // Concatenate strings if confirms are true
         if (lowercase) {
@@ -52,7 +52,7 @@ function generatePassword() {
         }
 
         // Add the new password to the html and change the color
-        var yourSecurePassword = document.getElementById("password");
+        const yourSecurePassword = document.getElementById("password");
         yourSecurePassword.textContent = userPassword.replace("<", "&lt").replace(">", "&gt");
         document.getElementById("password").style.color = "rgb(69, 69, 69)";
 
